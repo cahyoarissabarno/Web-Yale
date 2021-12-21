@@ -176,21 +176,21 @@ p {
     align-content: center;}
 .Art {
     float: left;
-    left: 2vw;
+    left: 3vw;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
     align-content: center;
     /* background-size: 100%; */
-    /* margin: 5px; */
+    margin: 5px;
     /* width: 32%; */
     /* height: 20%; */
     /* display: table; */
     overflow: hidden;
     text-align: center;
-    height: 20vmax; 
-    width: 20vmax;
+    height: 19vmax; 
+    width: 19vmax;
 }
 
 .Art .desc {
@@ -308,12 +308,13 @@ input {
     width: 100%;
     height: 5px;}
 
-.LeftCP, .RightCP {
+/* .LeftCP, .RightCP {
     width: 45%;
     padding-top: 15px;
     margin: 0 5px;
     height: fit-content;
-    float: left;}
+    float: left;
+} */
 .Contact {
     margin-bottom: 5%;
     float: left;
@@ -436,7 +437,7 @@ input {
 .timeline-steps .timeline-content .inner-circle:before {
     content: "";
     /* background-color: #3b82f6; */
-    background-image: url('./YaleAset/Bel.png');
+    background-image: url('YaleAset/Bel.png');
     background-size: cover;
     display: inline-block;
     height: 6rem;
@@ -460,13 +461,13 @@ input {
 }
 .gallery-cell {
     opacity: 0.3;
-    padding: 50px !important;
+    padding: 20px !important;
     font-size: 12px !important;
 }
 .is-selected {
     opacity: 1 !important;
-    padding: 0 !important;
-    font-size: 22px !important;
+    padding: 1px !important;
+    font-size: 20px !important;
     transition: 0.3s; 
 }
 .toTop {
