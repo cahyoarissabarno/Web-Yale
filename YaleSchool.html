@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        
+        <title>Yale School of Art</title>
+        <style type="text/css">
+            body {
+                font-family: 'Futura PT', sans-serif;
+                margin: 0 auto;}
+            header {
+                position: fixed;
+                padding-top: 10px;
+                padding-right: 80px;
+                padding-left: 80px;
+                width: 1920px;
+                height: 230px;
+                background-image: url("YaleAset/BGheader.png");
+                background-repeat: no-repeat;
+                background-blend-mode: overlay;
+                z-index: 10;}
+            #logo {
+                width: 30%;
+                padding: 5px;
+                float: left;}
+            #logo img {
+                float: left;
+                padding-top: 15px;;
+                width: 50px;
+                height: auto;}
+            #Nav {
+                width: 70%px;
+                float: right;}
+            h1.yale {
+                margin-left: 10px;
+                float: left;
+                color: #ffff;
+                font-weight: bold;}
+            p.nav {
+                float: left;
+                color: #ffff;
+                text-align: center;
+                top: 10px;
+                left: 0px;
+                padding: 30px;
+                margin: 10px;}  
+                * {box-sizing:border-box}
+            
+            #slider {
+                max-width: 1920px;
+                height: 550px;}
+
+            .slideshow-container {
+                position: relative;
+                margin: auto;}
+
+            .mySlides {
+                display: none;}
+
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: white;
+                transition: 0.6s ease;
+                border-radius: 0 30px 30px 0;
+                user-select: none;}
+
+            .next {
+                right: 0;
+                border-radius: 30px 0 0 30px;}
+
+            .prev:hover, .next:hover {
+                background-color: #FFE515;}
+
+            .text, .description {
+                color: #f2f2f2;
+                font-weight: bolder;
+                font-size: 60px;
+                padding: 8px 12px;
+                position: absolute;
+                padding-left: 80px;
+                bottom: 260px;
+                width: 100%;
+                height: 20px;
+                text-align: left;}
+            .description {
+                font-size: 15px;
+                font-weight:lighter;
+                width: 700px;
+                bottom: 190px;
+                padding-left: 83px;}
+            
+            #dot {
+                position: absolute;
+                padding: 8px 12px;
+                bottom: 120px;
+                width: 100%;}
+            .dot {
+                cursor: pointer;
+                height: 10px;
+                width: 10px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;}
+            
+            .active, .dot:hover {
+                background-color: #FFE515;}
+            
+            /*.fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;}*/
+
+            @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+
+            @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+            
+            #About {
+                width: fit-content;
+                height: 1150px;
+                padding-left: 80px;
+                padding-right: 80px;
+                background-image: url("YaleAset/BGSectionAbout.png");
+                background-repeat: no-repeat;
+                background-size: 100%;}
+            #About img {
+                float: left;
+                padding-top: 15px;
+                width: 100%;
+                height: auto;}
+            .About {
+                width: 100%;
+                height: 750px;
+                padding-top: 200px;}
+            .Menu,.MenuNews,.MenuGallery,.MenuEvent{
+                color: #f2f2f2;
+                font-weight: bolder;
+                font-size: 50px;
+                padding: 8px 12px;
+                text-align: center;}
+            .MenuNews {
+                color: #403905;}
+            .MenuGallery {
+                color: #3B0B09;}
+            .MenuEvent {
+                color: #00253F;}
+            #profil {
+                width: 40%;
+                float: left;}
+            #isiprofil {
+                width: 60%;
+                float: left;
+                color: #f2f2f2;
+                padding: 60px;
+                margin: auto;}
+            
+            .Button {
+                border: 1px solid;
+                border-color: white;
+                line-height: 1.5;
+                padding: 0 20px;
+                text-align: center;
+                text-decoration: none;
+                font-family: 'Futura PT';
+                vertical-align: middle;
+                color: #fff;
+                background-color: transparent;
+                padding: 0.375rem 0.75rem;
+                font-size: 1rem;
+                border-radius: 0.25rem;}
+
+            .Button:hover {
+                background-color: white;
+                color: #00497E;
+                border: 1px solid;}
+
+            .Button:active {
+                background-color: transparent;
+                color: #FFF28A;
+                border: 1px solid #FFF28A;}
+
+            .swiper {
+                width: 100%;
+                height: auto;
+                padding: none;}
+
+            .swiper-slide {
+                width: 18%;
+                margin: 10px;
+                float: left;
+                text-align: center;
+                font-size: 18px;
+                background: transparent;
+
+                /* Center slide text vertically
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;*/}
+            
+            .swiper-slide img {
+                border-radius: 20px;
+                width: 70%;
+                height: auto;
+                float: none;}
+
+            .News {
+                float: none;
+                color: #403905;}
+            .date {
+                border-top: 1px #403905 solid;
+                padding-top: 10px;
+                font-weight: lighter;
+                color: #403905;}
+
+            #Gallery {
+                width: 100%;
+                height: 1150px;
+                padding-top: 200px;
+                padding-left: 145px;
+                padding-right: 145px;
+                background-image: url("YaleAset/BG_Gallery.png");
+                background-repeat: no-repeat;
+                background-size: 100%;}
+
+            .Gallery {
+                padding-top: 27px;
+                width: 100%;
+                height: 600px;
+                position: center;
+                align-content: center;}
+            .Art {
+                float: left;
+                margin: 0 5px 10px 5px;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                position: relative;
+                background-size: 100%;
+                width: 32%;
+                height: 270px;
+                display: table;
+                overflow: hidden;
+                text-align: center;}
+            
+            .Art .desc {
+                display: table-cell;
+                vertical-align: middle;
+                height: 270px;
+                background: black;
+                opacity: 0;
+                -webkit-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
+                }
+            .Art .desc h3 {
+                font-size: 20px;
+                color: #FFE515;
+                -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+                transition: transform 0.3s, opacity 0.3s;
+                -webkit-transform: translate3d(0, -15px, 0);
+                transform: translate3d(0, -15px, 0);
+                }
+            .Art .desc span {
+                display: block;
+                color: #999999;
+                font-size: 14px;
+                -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+                transition: transform 0.3s, opacity 0.3s;
+                -webkit-transform: translate3d(0, 15px, 0);
+                transform: translate3d(0, 15px, 0);
+                }
+                @media screen and (max-width: 768px) {
+            .Art .desc {
+                    opacity: 1;
+                    background: rgba(255, 255, 255, 0.6);
+                }
+            .Art .desc h3 {
+                    -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                }
+            .Art .desc span {
+                    -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                }
+                }
+            .Art:hover .desc {
+                opacity: 85%;
+                }
+            .Art:hover .desc h3 {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                }
+            .Art:hover .desc span {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);}
+            
+            #Event {
+                width: 100%;
+                height: 1200px;
+                padding-left: 80px;
+                padding-right: 80px;}
+            
+            .clear {
+                clear: left;}    
+
+
+        </style>
+        
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="YaleAset/Logo_Putih.png">
+                <h1 class="yale">Yale School of Art</h1>
+            </div>
+            <div id="nav">
+                <p class="nav">
+                    About
+                </p>
+                <p class="nav">
+                    Apply
+                </p>
+                <p class="nav">
+                    News
+                </p>
+                <p class="nav">
+                    Gallery
+                </p>
+                <p class="nav">
+                    Event
+                </p>
+                <p class="nav">
+                    Follow Us
+                </p>
+            </div>
+        </header>
+        <section id="slider">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="YaleAset/Slider1.png" style="width:100%">
+                    <div class="text">Painting Class Routine</div>
+                    <div class="description">Painting is a branch or part of fine art where the form of painting is a two-dimensional, two-dimensional work, although it has the same basic understanding as fine art, painting has more meaning because painting is a more complete development than just drawing.</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="YaleAset/Slider2.png" style="width:100%">
+                    <div class="text">Fine Art Exhibition</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="YaleAset/Slider3.png" style="width:100%">
+                    <div class="text">Painting Jam</div>
+                </div>
+            </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+           
+            <div id='dot'>
+                <br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+            </script>
+ 
+        </section>
+        
+        <section id="About">
+            <img src="YaleAset/Yale.png" style="width:100%">
+            <div class="About">
+                <div class="Menu">About</div>
+                <div id="profil">
+                    <img src="YaleAset/Photo_Profile.png" style="width:100%">
+                </div>
+                <div id="isiprofil">
+                    <p>The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.</p>
+                    <input class="Button"
+                        type="button"
+                        href="https://www.art.yale.edu/about"
+                        value="Learn More">
+                </div>
+            </div>
+            <div class="MenuNews">News</div>
+            
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="YaleAset/Photo_News_1.png">
+                        <p class="News">Painting/Printmaking 
+                            Alum Jordan Casteel '14 
+                            Named 2021 Macarthur Fellow</p>
+                        <p class="date">September 28, 2021</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="YaleAset/Photo_News_2.png">
+                        <p class="News">Painting/Printmaking 
+                            Alum Jordan Casteel '14 
+                            Named 2021 Macarthur Fellow</p>
+                        <p class="date">September 28, 2021</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="YaleAset/Photo_News_3.png">
+                        <p class="News">Painting/Printmaking 
+                            Alum Jordan Casteel '14 
+                            Named 2021 Macarthur Fellow</p>
+                        <p class="date">September 28, 2021</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="YaleAset/Photo_News_4.png">
+                        <p class="News">Painting/Printmaking 
+                            Alum Jordan Casteel '14 
+                            Named 2021 Macarthur Fellow</p>
+                        <p class="date">September 28, 2021</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="YaleAset/Photo_News_5.png">
+                        <p class="News">Painting/Printmaking 
+                            Alum Jordan Casteel '14 
+                            Named 2021 Macarthur Fellow</p>
+                        <p class="date">September 28, 2021</p>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+               
+              <!-- Initialize Swiper -->
+              <script type="module">
+                import Swiper from 'swiper/swiper-bundle.esm.js';
+                import 'swiper/swiper-bundle.css';
+                var swiper = new Swiper('.swiper', {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                  slidesPerGroup: 3,
+                  loop: true,
+                  loopFillGroupWithBlank: true,
+                  pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                });
+              </script>
+        </section>
+
+        <section id="Gallery">
+            <div class="MenuGallery">Gallery</div>
+
+            <div class="Gallery">
+                <a href="#" class="Art" style="background-image:url(YaleAset/Gallery1.png);">
+                    <div class="desc">
+                        <h3>Title</h3>
+                        <span>Who</span>
+                    </div>
+                </a>
+                <a href="#" class="Art" style="background-image:url(YaleAset/Gallery2.png);">
+                    <div class="desc">
+                        <h3>Title</h3>
+                        <span>Who</span>
+                    </div>
+                </a>
+                <a class="Art" style="background-image:url(YaleAset/Gallery3.png);">
+                    <div class="desc">
+                        <h3>Title</h3>
+                        <span>Who</span>
+                    </div>
+                </a>
+                <a class="Art" style="background-image:url(YaleAset/Gallery4.png);">
+                    <div class="desc">
+                        <h3>Title</h3>
+                        <span>Who</span>
+                    </div>
+                </a>
+                <a class="Art" style="background-image:url(YaleAset/Gallery5.png);">
+                    <div class="desc">
+                        <h3>Title</h3>
+                        <span>Who</span>
+                    </div>
+                </a>
+                <a class="Art" style="background-image:url(YaleAset/Gallery6.png);">
+                    <div class="desc">
+                        <h3>Title</h3>
+                        <span>Who</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="Event">
+            <div class="MenuEvent">Event</div>
+        </section>
+    </body>
+</html>

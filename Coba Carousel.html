@@ -1,0 +1,86 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+        <title>Carousel</title>
+        <style type="text/css">
+            /* external css: flickity.css */
+            * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            }
+
+            body { font-family: sans-serif; }
+
+            .gallery {
+            background: transparent;
+            }
+
+            .gallery-cell {
+            width: 250px;
+            height: 350px;
+            margin-right: 10px;
+            counter-increment: gallery-cell;
+            text-align: center;
+            }
+            .News {
+                float: none;
+                color: #403905;
+                font-weight: bold;}
+            .date {
+                border-top: 1px #403905 solid;
+                padding-top: 10px;
+                font-weight: lighter;
+                color: #403905;}
+
+        </style>
+    </head>
+    <body>
+        
+
+        <!-- Flickity HTML init -->
+        <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+            <div class="gallery-cell">
+                <img src="YaleAset/Photo_News_1.png" style="width: 100%; border-radius: 20px;">
+                <p class="News">Painting/Printmaking 
+                    Alum Jordan Casteel '14 
+                    Named 2021 Macarthur Fellow</p>
+                <p class="date">September 28, 2021</p>
+            </div>
+            <div class="gallery-cell">
+                <img src="YaleAset/Photo_News_2.png" style="width: 100%; border-radius: 20px;">
+                <p class="News">Artist, Critic, Curator, Professor,
+                    and Former Dean Robert Storr
+                    Retires From Yale</p>
+                <p class="date">June 30, 2021</p>
+            </div>
+            <div class="gallery-cell">
+                <img src="YaleAset/Photo_News_3.png" style="width: 100%; border-radius: 20px;">
+                <p class="News">Sondra Perry Named the 2021
+                    Presidential Visiting Fellow
+                    in Fine Arts</p>
+                <p class="date">March 4, 2021</p>
+            </div>
+            <div class="gallery-cell">
+                <img src="YaleAset/Photo_News_4.png" style="width: 100%; border-radius: 20px;">
+                <p class="News">Spring 2021Thesis Exbitions
+                    Upcoming Public Virtual Event
+                    with Tauba Auerbach</p>
+                <p class="date">February 16, 2021</p>
+            </div>
+            <div class="gallery-cell">
+                <img src="YaleAset/Photo_News_5.png" style="width: 100%; border-radius: 20px;">
+                <p class="News">Online Exhibition Launched:
+                    “In Praise of Shadows"
+                    Painting/Printmaking MFA 2021</p>
+                <p class="date">March 1, 2021</p>
+            </div>
+        </div>
+    </body>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</html>
