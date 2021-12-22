@@ -453,7 +453,7 @@ input {
     background-color: transparent;
 }
 
-.timeline-steps .timeline-content .inner-circle::before {
+.timeline-steps .timeline-content .inner-circle:after {
     content: "";
     /* background-color: #3b82f6; */
     background-image: url('YaleAset/Bel.png');
