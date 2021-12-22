@@ -443,7 +443,7 @@ input {
     text-align: center
 }
 
-.timeline-steps .timeline-content .inner-circle {
+/* .timeline-steps .timeline-content .inner-circle {
     border-radius: 1.5rem;
     height: 1rem;
     width: 1rem;
@@ -451,9 +451,9 @@ input {
     align-items: center;
     justify-content: center;
     background-color: transparent;
-}
+} */
 
-.timeline-steps .timeline-content .inner-circle::after {
+.timeline-steps .timeline-content .inner-circle {
     content: "";
     /* background-color: #3b82f6; */
     background-image: url('YaleAset/Bel.png');
