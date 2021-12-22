@@ -42,9 +42,10 @@ body {
 .Header {
     position: fixed;
     z-index: 10;
+    opacity: 80%;
     }
 .Header:hover {
-    opacity: 1;}
+    opacity: 1 !important;}
 .navbar {
     background-color: #00375F;}
 .nav-link {
