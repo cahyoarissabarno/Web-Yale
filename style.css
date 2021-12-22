@@ -214,7 +214,25 @@ p {
     -webkit-transform: translate3d(0, -15px, 0);
     transform: translate3d(0, -15px, 0);
     }
-.Art .desc span {
+
+    @media screen and (max-width: 320px) {
+        .Artbox{
+            margin: 0px !important;
+        }
+        
+        .Art{
+            height: 28vw; 
+            width: 28vw;
+            margin: 3px;
+        }
+    
+        .desc{
+            height: 28vw; 
+            width: 28vw;
+        }
+    }
+    
+    .Art .desc span {
     display: block;
     color: #999999;
     font-size: 14px;
