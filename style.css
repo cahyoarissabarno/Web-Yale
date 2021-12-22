@@ -215,7 +215,7 @@ p {
     transform: translate3d(0, -15px, 0);
     }
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 380px) {
         .Artbox{
             margin: 0px !important;
         }
@@ -231,7 +231,7 @@ p {
             width: 28vw;
         }
     }
-    
+
     .Art .desc span {
     display: block;
     color: #999999;
